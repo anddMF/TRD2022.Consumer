@@ -1,6 +1,6 @@
 import avro from 'avsc';
 
-const type = avro.Type.forSchema({
+export default avro.Type.forSchema({
     type: 'record',
     name: 'Event',
     fields: [
@@ -18,10 +18,10 @@ const type = avro.Type.forSchema({
         { name: 'initial_qty', type: 'double' },
         { name: 'final_qty', type: 'double' },
         { name: 'valorization', default: null, type: ['null', 'double'] },
-        { name: 'date', type: { type: 'long', logicalType: 'local-timestamp-millis' } },
+        { name: 'timestamp', type: 'string' },
         { name: 'client_id', type: 'int' },
         { name: 'message', default: null, type: ['null', 'string'] }
     ]
 });
 
-export { type };
+
