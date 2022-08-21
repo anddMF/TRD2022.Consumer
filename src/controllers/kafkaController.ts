@@ -8,7 +8,7 @@ export class KafkaController {
 
     async get(request: Request, response: Response): Promise<Response> {
         try {
-            await this.kafkaProvider.consume(request).then( x => {
+            await this.kafkaProvider.consume().then( x => {
                 console.log('\n\n######## RESPOSTA NA CONTROLLER', x)
             })
         } catch (err) {

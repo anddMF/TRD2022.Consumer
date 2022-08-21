@@ -12,7 +12,6 @@ export class KafkaProvider {
     private kafka = new Kafka({ clientId: this.clientId, brokers: this.brokers });
 
     constructor() { 
-        dotenv.config();
         this.clientId = process.env.KAFKA_CLIENTID;
         this.brokers.push(process.env.KAFKA_BROKER);
         this.topic = process.env.KAFKA_TOPIC;
