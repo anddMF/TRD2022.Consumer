@@ -6,8 +6,7 @@ export class TradeEvent {
     public asset: string;
     public initialPrice: number;
     public finalPrice: number;
-    public initialQty: number;
-    public finalQty: number;
+    public quantity: number;
     public valorization: number;
     public timestamp: Date;
     public clientId: number;
@@ -20,8 +19,7 @@ export class TradeEvent {
             asset,
             initial_price,
             final_price,
-            initial_qty,
-            final_qty,
+            quantity,
             valorization,
             timestamp,
             client_id,
@@ -33,8 +31,7 @@ export class TradeEvent {
         this.asset = asset;
         this.initialPrice = initial_price;
         this.finalPrice = final_price;
-        this.initialQty = initial_qty;
-        this.finalQty = final_qty;
+        this.quantity = quantity;
         this.valorization = valorization;
         this.timestamp = timestamp;
         this.clientId = client_id;
