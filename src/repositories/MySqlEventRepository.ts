@@ -13,8 +13,7 @@ export class MySqlEventRepository {
                 ASSET,
                 INITIAL_PRICE,
                 FINAL_PRICE,
-                INITIAL_QTY,
-                FINAL_QTY,
+                QUANTITY,
                 VALORIZATION,
                 INFO,
                 MOMENT
@@ -28,8 +27,7 @@ export class MySqlEventRepository {
                 ASSET,
                 INITIAL_PRICE,
                 FINAL_PRICE,
-                INITIAL_QTY,
-                FINAL_QTY,
+                QUANTITY,
                 VALORIZATION,
                 INFO,
                 MOMENT

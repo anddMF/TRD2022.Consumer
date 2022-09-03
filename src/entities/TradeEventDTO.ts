@@ -8,8 +8,7 @@ export class TradeEventDTO {
     public ASSET: string;
     public INITIAL_PRICE: number;
     public FINAL_PRICE: number;
-    public INITIAL_QTY: number;
-    public FINAL_QTY: number;
+    public QUANTITY: number;
     public VALORIZATION: number;
     public INFO: string;
     public MOMENT: Date;
@@ -22,8 +21,7 @@ export class TradeEventDTO {
         this.ASSET = model.asset;
         this.INITIAL_PRICE = model.initialPrice;
         this.FINAL_PRICE = model.finalPrice;
-        this.INITIAL_QTY = model.initialQty;
-        this.FINAL_QTY = model.finalQty;
+        this.QUANTITY = model.quantity;
         this.VALORIZATION = model.valorization;
         this.INFO = model.message;
         this.MOMENT = model.timestamp;
