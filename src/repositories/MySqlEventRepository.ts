@@ -1,11 +1,13 @@
+import { RecordEvent } from './../entities/RecordEvent';
 import { TradeEventDTO } from './../entities/TradeEventDTO';
 import { TradeEvent } from '../entities/TradeEvent';
 import { DataTypes, Model, ModelCtor, Sequelize } from 'sequelize'
 export class MySqlEventRepository {
     constructor() { }
 
-    public async insertEvent(obj: TradeEvent) {
+    public async insertEvent(obj: RecordEvent) {
         try {
+            let dto = new TradeEventDTO(obj)
             const {
                 ID_CLIENT,
                 EVENT_TYPE,
@@ -17,9 +19,9 @@ export class MySqlEventRepository {
                 VALORIZATION,
                 INFO,
                 MOMENT
-            } = new TradeEventDTO(obj);
+            } = dto;
             const eventTable = this.getTableDefinition(this.getDatabase());
-            
+
             const response = await eventTable.create({
                 ID_CLIENT,
                 EVENT_TYPE,
@@ -57,7 +59,7 @@ export class MySqlEventRepository {
     }
 
     private getTableDefinition(db: Sequelize): ModelCtor<Model<any, any>> {
-        const table = db.define("trd2022_event", {
+        const table = db.define('trd2022_event', {
             ID: {
                 type: DataTypes.INTEGER,
                 autoIncrement: true,
@@ -108,7 +110,7 @@ export class MySqlEventRepository {
                 type: DataTypes.DATE,
                 allowNull: true
             }
-        });
+        }, { freezeTableName: true });
 
         return table;
     }

@@ -12,31 +12,7 @@ export class TradeEvent {
     public clientId: number;
     public message: string;
 
-    constructor(eventAvro?: any) {
-        const { 
-            event_type,
-            rec_type,
-            asset,
-            initial_price,
-            final_price,
-            quantity,
-            valorization,
-            timestamp,
-            client_id,
-            message,
-        } = eventAvro;
-
-        this.eventType = event_type;
-        this.recType = rec_type;
-        this.asset = asset;
-        this.initialPrice = initial_price;
-        this.finalPrice = final_price;
-        this.quantity = quantity;
-        this.valorization = valorization;
-        this.timestamp = timestamp;
-        this.clientId = client_id;
-        this.message = message;
-    }
+    constructor() {}
 
 }
 
