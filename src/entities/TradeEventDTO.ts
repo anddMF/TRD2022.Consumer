@@ -1,4 +1,5 @@
-import { EventType, RecommendationType, TradeEvent } from './TradeEvent';
+import { RecordEvent } from './RecordEvent';
+import { EventType, RecommendationType } from './TradeEvent';
 
 export class TradeEventDTO {
     public ID: number;
@@ -13,14 +14,14 @@ export class TradeEventDTO {
     public INFO: string;
     public MOMENT: Date;
 
-    constructor(model?: TradeEvent){
+    constructor(model: RecordEvent) {
         this.ID = 0;
-        this.ID_CLIENT = model.clientId;
-        this.EVENT_TYPE = model.eventType;
-        this.REC_TYPE = model.recType;
+        this.ID_CLIENT = model.client_id;
+        this.EVENT_TYPE = model.event_type;
+        this.REC_TYPE = model.rec_type;
         this.ASSET = model.asset;
-        this.INITIAL_PRICE = model.initialPrice;
-        this.FINAL_PRICE = model.finalPrice;
+        this.INITIAL_PRICE = model.initial_price;
+        this.FINAL_PRICE = model.final_price;
         this.QUANTITY = model.quantity;
         this.VALORIZATION = model.valorization;
         this.INFO = model.message;
