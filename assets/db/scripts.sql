@@ -7,6 +7,8 @@ CREATE TABLE trd2022_client(
     DT_REGISTER DATETIME
 )
 
+INSERT INTO trd2022_client (NAME, EMAIL, PASSWORD, DT_REGISTER) VALUES('Adolfo Pinheiro', 'adolfop@email.com', '12345', CURDATE())
+
 -- EVENT TYPE
 CREATE TABLE trd2022_event_type(  
     ID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
