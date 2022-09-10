@@ -10,8 +10,8 @@ export class MySqlEventRepository {
             let dto = new TradeEventDTO(obj)
             const {
                 ID_CLIENT,
-                EVENT_TYPE,
-                REC_TYPE,
+                ID_EVENT_TYPE,
+                ID_REC_TYPE,
                 ASSET,
                 INITIAL_PRICE,
                 FINAL_PRICE,
@@ -24,8 +24,8 @@ export class MySqlEventRepository {
 
             const response = await eventTable.create({
                 ID_CLIENT,
-                EVENT_TYPE,
-                REC_TYPE,
+                ID_EVENT_TYPE,
+                ID_REC_TYPE,
                 ASSET,
                 INITIAL_PRICE,
                 FINAL_PRICE,
@@ -70,12 +70,12 @@ export class MySqlEventRepository {
                 type: DataTypes.INTEGER,
                 allowNull: true
             },
-            EVENT_TYPE: {
-                type: DataTypes.STRING,
+            ID_EVENT_TYPE: {
+                type: DataTypes.INTEGER,
                 allowNull: false
             },
-            REC_TYPE: {
-                type: DataTypes.STRING,
+            ID_REC_TYPE: {
+                type: DataTypes.INTEGER,
                 allowNull: true
             },
             ASSET: {
@@ -110,7 +110,7 @@ export class MySqlEventRepository {
                 type: DataTypes.DATE,
                 allowNull: true
             }
-        }, { freezeTableName: true });
+        }, { freezeTableName: true, timestamps: false });
 
         return table;
     }
