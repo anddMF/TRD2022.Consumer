@@ -90,11 +90,7 @@ export class MySqlEventRepository {
                 type: DataTypes.DOUBLE,
                 allowNull: true
             },
-            INITIAL_QTY: {
-                type: DataTypes.DOUBLE,
-                allowNull: true
-            },
-            FINAL_QTY: {
+            QUANTITY: {
                 type: DataTypes.DOUBLE,
                 allowNull: true
             },
