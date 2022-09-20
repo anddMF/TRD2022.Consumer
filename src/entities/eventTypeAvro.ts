@@ -6,7 +6,7 @@ export default avro.Type.forSchema({
     fields: [
         {
             name: 'event_type',
-            type: { type: 'enum', name: 'EventType', symbols: ['BUY', 'SELL', 'INFO', 'ERROR'] }
+            type: { type: 'enum', name: 'EventType', symbols: ['BUY', 'SELL', 'INFO', 'ERROR', 'START', 'FINISH'] }
         },
         {
             name: 'rec_type',
