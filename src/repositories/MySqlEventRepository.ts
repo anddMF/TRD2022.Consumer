@@ -35,7 +35,7 @@ export class MySqlEventRepository {
                 MOMENT
             });
 
-            console.log('\n\n PASSOU INSERT ', response);
+            console.log('\n\n PUSHED TO DB ', response);
 
         } catch (error) {
             console.log('\n\n####Error repository: ', error);
